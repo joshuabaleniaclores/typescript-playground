@@ -48,8 +48,14 @@ function sayHello(): number {
 }
 sayHello();
 
-function throwError(message: string): never {
-    throw new Error(message);
-}
+// function throwError(message: string): never {
+//     throw new Error(message);
+// }
 
-throwError("This is a never type error!");
+// throwError("This is a never type error!");
+
+//Learning Arrays and Tuples
+let numbers: readonly number[] = [1, 2, 3, 4, 5];
+let tuple: [string, number, string] = ["Hello", 42, "World"];
+console.log(`Numbers: ${numbers.join(", ")}`);
+console.log(`Tuple: ${tuple[0]}, ${tuple[1]}, ${tuple[2]}`);
