@@ -25,7 +25,9 @@ console.log(`Age: ${age}, Address: ${address}, Is Student: ${isStudent}`);
 let username = "clo";
 let score = 100;
 let isLoggedIn = false;
-console.log(`Username: ${username}, Score: ${score}, Is Logged In: ${isLoggedIn}`);
+console.log(
+  `Username: ${username}, Score: ${score}, Is Logged In: ${isLoggedIn}`,
+);
 
 //Learning Special Types
 let notDefined: undefined = undefined;
@@ -43,8 +45,8 @@ flexibleValue = 3.14;
 console.log(`Flexible Value after reassignment: ${flexibleValue}`);
 
 function sayHello(): number {
-    console.log("Hello from a void function!");
-    return 0;
+  console.log("Hello from a void function!");
+  return 0;
 }
 sayHello();
 
@@ -62,17 +64,46 @@ console.log(`Tuple: ${tuple[0]}, ${tuple[1]}, ${tuple[2]}`);
 
 //Learning Object Types
 let person: { name: string; age: number; isEmployed: boolean } = {
-    name: "Alice",
-    age: 30,
-    isEmployed: true
+  name: "Alice",
+  age: 30,
+  isEmployed: true,
 };
 
-console.log(`Person: Name - ${person.name}, Age - ${person.age}, Employed - ${person.isEmployed}`);
+console.log(
+  `Person: Name - ${person.name}, Age - ${person.age}, Employed - ${person.isEmployed}`,
+);
 
 //Learning Index Signatures
 let dictionary: { [key: string]: string } = {
-    "hello": "A greeting",
-    "world": "The earth"
-}
+  hello: "A greeting",
+  world: "The earth",
+};
 
 console.log(`Dictionary: ${JSON.stringify(dictionary)}`);
+
+//Learning Type Aliases
+type CarYear = number;
+type CarType = string;
+type CarModel = string;
+type Car = {
+  year: CarYear;
+  type: CarType;
+  model: CarModel;
+};
+let myCar: Car = {
+  year: 2020,
+  type: "Sedan",
+  model: "Toyota Camry",
+};
+console.log(`My Car: ${myCar.year} ${myCar.type} ${myCar.model}`);
+
+//Learning Union Types
+type studentId = number | string;
+let id1: studentId = 12345;
+let id2: studentId = "S12345";
+console.log(`Student ID 1: ${id1}, Student ID 2: ${id2}`);
+
+type Status = "active" | "inactive" | "pending";
+let userStatus: Status = "active";
+console.log(`User Status: ${userStatus}`);
+
