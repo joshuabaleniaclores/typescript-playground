@@ -59,3 +59,20 @@ let numbers: readonly number[] = [1, 2, 3, 4, 5];
 let tuple: [string, number, string] = ["Hello", 42, "World"];
 console.log(`Numbers: ${numbers.join(", ")}`);
 console.log(`Tuple: ${tuple[0]}, ${tuple[1]}, ${tuple[2]}`);
+
+//Learning Object Types
+let person: { name: string; age: number; isEmployed: boolean } = {
+    name: "Alice",
+    age: 30,
+    isEmployed: true
+};
+
+console.log(`Person: Name - ${person.name}, Age - ${person.age}, Employed - ${person.isEmployed}`);
+
+//Learning Index Signatures
+let dictionary: { [key: string]: string } = {
+    "hello": "A greeting",
+    "world": "The earth"
+}
+
+console.log(`Dictionary: ${JSON.stringify(dictionary)}`);
